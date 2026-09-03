@@ -1,0 +1,30 @@
+/* public/css/layout/shell.css */
+/* HOMEHUB app shell layout. */
+
+.hh-shell {
+  min-height: 100vh;
+  background: var(--hh-bg);
+}
+
+.hh-main {
+  min-width: 0;
+  padding: 22px 16px 92px;
+}
+
+.hh-page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+@media (min-width: 901px) {
+  .hh-shell {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+  }
+
+  .hh-main {
+    min-width: 0;
+    padding: 22px 16px 150px;
+  }
+}

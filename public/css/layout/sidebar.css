@@ -1,0 +1,189 @@
+/* public/css/layout/sidebar.css */
+/* HOMEHUB sidebar and mobile navigation */
+
+.hh-sidebar {
+  display: none;
+}
+
+.hh-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.hh-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 16px;
+  border-radius: 14px;
+  color: #eef4ff;
+  font-weight: 750;
+  transition: .2s;
+}
+
+.hh-nav-link.active {
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  box-shadow: inset 4px 0 0 var(--hh-gold);
+}
+
+.hh-nav-link:hover {
+  background: rgba(255,255,255,.12);
+}
+
+.hh-sidebar-footer {
+  margin-top: auto;
+}
+
+.hh-user-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.hh-user-card strong {
+  display:block;
+  font-size:15px;
+}
+
+.hh-user-card span {
+  display:block;
+  margin-top:4px;
+  font-size:13px;
+  opacity:.9;
+}
+
+/* =======================================================
+   MOBILE BOTTOM NAV
+======================================================= */
+
+.hh-mobile-nav {
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 18px;
+  z-index: 999;
+
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+
+  background:#fff;
+  border:1px solid var(--hh-border);
+  border-radius:24px;
+
+  padding:8px;
+
+  box-shadow:
+      0 10px 30px rgba(0,0,0,.15);
+
+  backdrop-filter: blur(12px);
+}
+
+.hh-mobile-nav a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  gap:4px;
+
+  text-decoration:none;
+
+  color:var(--hh-muted);
+
+  font-size:10px;
+  font-weight:800;
+
+  border-radius:16px;
+
+  padding:10px 2px;
+
+  transition:.2s;
+}
+
+.hh-mobile-nav a span{
+  font-size:20px;
+  line-height:1;
+}
+
+.hh-mobile-nav a.active{
+  background:var(--hh-blue-soft);
+  color:var(--hh-blue);
+}
+
+.hh-mobile-nav a:hover{
+  background:#f4f7ff;
+}
+
+/* =======================================================
+   DESKTOP
+======================================================= */
+
+@media (min-width:901px){
+
+  .hh-sidebar{
+    display:flex;
+    flex-direction:column;
+
+    background:linear-gradient(
+        180deg,
+        #0b3d91,
+        #06265f
+    );
+
+    color:#fff;
+
+    min-height:100vh;
+
+    padding:28px 18px;
+  }
+
+  .hh-brand{
+    text-align:center;
+    padding:8px 8px 26px;
+  }
+
+  .hh-logo{
+    width:88px;
+    height:88px;
+
+    margin:0 auto 16px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:26px;
+
+    border:4px solid var(--hh-gold);
+
+    color:var(--hh-gold);
+
+    font-size:42px;
+    font-weight:900;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+  }
+
+  .hh-brand-title{
+    margin:0;
+    color:var(--hh-gold);
+    font-size:31px;
+    letter-spacing:1.5px;
+  }
+
+  .hh-brand-subtitle{
+    margin-top:6px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.4px;
+    opacity:.95;
+  }
+
+  /* hide mobile navigation on desktop */
+
+  .hh-mobile-nav{
+    display:none;
+  }
+
+}

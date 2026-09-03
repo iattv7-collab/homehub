@@ -1,0 +1,56 @@
+/* public/css/layout/header.css */
+/* HOMEHUB top header styles. */
+
+.hh-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.hh-greeting h1 {
+  margin: 0;
+  color: var(--hh-blue);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.hh-greeting p {
+  margin: 8px 0 0;
+  color: var(--hh-muted);
+  font-size: 16px;
+}
+
+.hh-weather {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--hh-blue);
+  font-weight: 800;
+}
+
+.hh-weather-icon {
+  font-size: 34px;
+}
+
+.hh-weather-temp {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.hh-weather-label {
+  color: var(--hh-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .hh-topbar {
+    display: grid;
+  }
+
+  .hh-greeting h1 {
+    font-size: 28px;
+  }
+}

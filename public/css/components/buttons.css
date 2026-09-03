@@ -1,0 +1,27 @@
+/* public/css/components/buttons.css */
+/* HOMEHUB button styles. */
+
+.hh-button {
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 18px;
+  background: var(--hh-blue);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--hh-shadow-sm);
+}
+
+.hh-button:hover {
+  background: var(--hh-blue-dark);
+}
+
+.hh-button.full {
+  width: 100%;
+}
+
+.hh-button.secondary {
+  background: #ffffff;
+  color: var(--hh-blue);
+  border: 1px solid var(--hh-border);
+}

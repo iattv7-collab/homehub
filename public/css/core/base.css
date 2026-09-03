@@ -1,0 +1,41 @@
+/* public/css/core/base.css */
+/* HOMEHUB base styles. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--hh-font);
+  background: var(--hh-bg);
+  color: var(--hh-text);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.hh-muted {
+  color: var(--hh-muted);
+}
+
+.hh-gold {
+  color: var(--hh-gold);
+}

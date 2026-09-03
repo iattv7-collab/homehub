@@ -1,0 +1,21 @@
+/* public/css/pages/home.css */
+/* HOMEHUB home page. */
+
+.hh-home {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hh-activity {
+  min-height: 220px;
+  padding: 24px;
+}
+
+.hh-activity h3 {
+  margin-top: 0;
+}
+
+.hh-activity p {
+  color: var(--hh-muted);
+}

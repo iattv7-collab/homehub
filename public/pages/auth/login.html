@@ -1,0 +1,74 @@
+/* public/pages/auth/login.html */
+
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>HOMEHUB Login</title>
+
+<link rel="stylesheet" href="/css/core/variables.css">
+<link rel="stylesheet" href="/css/core/base.css">
+<link rel="stylesheet" href="/pages/auth/login.css">
+
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            H
+        </div>
+
+        <h1>HOMEHUB</h1>
+
+        <p class="subtitle">
+            Smart Home Platform
+        </p>
+
+        <form id="loginForm">
+
+            <label>Email</label>
+
+            <input
+                id="email"
+                type="email"
+                autocomplete="username"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button
+                class="hh-button full"
+                type="submit">
+
+                Sign In
+
+            </button>
+
+        </form>
+
+        <div id="errorMessage"></div>
+
+    </div>
+
+</div>
+
+<script type="module" src="/js/pages/login-page.js"></script>
+
+</body>
+</html>

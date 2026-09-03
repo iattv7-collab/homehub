@@ -1,0 +1,168 @@
+/* public/css/components/cards.css */
+/* HOMEHUB reusable cards. */
+
+.hh-card {
+  background: var(--hh-surface);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-radius-md);
+  box-shadow: var(--hh-shadow-sm);
+}
+
+.hh-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.hh-status-card {
+  padding: 22px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hh-status-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--hh-blue-soft);
+  color: var(--hh-blue);
+  font-size: 28px;
+}
+
+.hh-status-card h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  color: var(--hh-muted);
+}
+
+.hh-status-card strong {
+  display: block;
+  color: var(--hh-blue);
+  font-size: 22px;
+}
+
+.hh-status-card p {
+  margin: 4px 0 0;
+  color: var(--hh-muted);
+  font-size: 14px;
+}
+
+.hh-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 16px;
+}
+
+.hh-section-title h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.hh-section-title h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: var(--hh-gold);
+  border-radius: 99px;
+  margin-top: 10px;
+}
+
+.hh-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.hh-app-card {
+  min-height: 250px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hh-app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: var(--hh-blue-soft);
+  font-size: 38px;
+}
+
+.hh-app-card h3 {
+  margin: 18px 0 8px;
+  font-size: 24px;
+}
+
+.hh-app-card p {
+  margin: 0;
+  color: var(--hh-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .hh-status-grid,
+  .hh-app-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .hh-status-grid,
+  .hh-app-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hh-app-card {
+    min-height: 210px;
+    padding: 22px;
+  }
+
+  .hh-app-card h3 {
+    font-size: 28px;
+  }
+
+  .hh-app-card p {
+    font-size: 18px;
+  }
+
+  .hh-button {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+
+  .hh-activity {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hh-status-grid {
+    gap: 14px;
+    margin-bottom: 38px;
+  }
+
+  .hh-status-card {
+    padding: 18px;
+  }
+
+  .hh-app-card {
+    min-height: 190px;
+    padding: 20px;
+  }
+
+  .hh-activity {
+    min-height: 220px;
+    margin-bottom: 40px;
+  }
+}

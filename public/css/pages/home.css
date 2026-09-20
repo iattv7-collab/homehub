@@ -4,18 +4,18 @@
 .hh-home {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 28px;
 }
 
-.hh-activity {
-  min-height: 220px;
-  padding: 24px;
-}
-
-.hh-activity h3 {
-  margin-top: 0;
-}
-
-.hh-activity p {
-  color: var(--hh-muted);
+.hh-status-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e8f6ee;
+  color: var(--hh-success);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }

@@ -43,20 +43,6 @@ function weatherIcon(code) {
   return "🌤️";
 }
 
-function setNetworkStatus() {
-  const state = document.getElementById("network-state");
-  const detail = document.getElementById("network-detail");
-  if (!state || !detail) return;
-
-  if (navigator.onLine) {
-    state.textContent = "Online";
-    detail.textContent = "This device is connected";
-  } else {
-    state.textContent = "Offline";
-    detail.textContent = "Waiting for Wi-Fi";
-  }
-}
-
 async function loadWeather() {
   const tempEl = document.getElementById("weather-temp");
   const iconEl = document.getElementById("weather-icon");
@@ -107,10 +93,6 @@ export function initializeHomePage() {
     if (userName) userName.textContent = user.displayName || user.email || "Signed in";
     if (userStatus) userStatus.textContent = "Signed in";
   });
-
-  setNetworkStatus();
-  window.addEventListener("online", setNetworkStatus);
-  window.addEventListener("offline", setNetworkStatus);
 
   document.getElementById("sign-out")?.addEventListener("click", handleSignOut);
   document.getElementById("sign-out-mobile")?.addEventListener("click", handleSignOut);

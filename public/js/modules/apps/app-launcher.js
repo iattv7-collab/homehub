@@ -21,10 +21,10 @@ function launchApp(appKey) {
 
 export function initializeAppLauncher() {
   document.querySelector('[data-launch="google-camera"]')
-    ?.addEventListener("click", () => launchApp("nest"));
+  ?.addEventListener("click", () => launchApp("google"));
 
-  document.querySelector('[data-launch="google-thermostat"]')
-    ?.addEventListener("click", () => launchApp("google"));
+document.querySelector('[data-launch="google-thermostat"]')
+  ?.addEventListener("click", () => launchApp("nest"));
 
   document.querySelector('[data-launch="smartthings-appliances"]')
     ?.addEventListener("click", () => launchApp("smartthings"));

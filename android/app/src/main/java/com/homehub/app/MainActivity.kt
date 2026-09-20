@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private val appPackages = mapOf(
         "google" to "com.google.android.apps.chromecast.app",
+        "nest" to "com.nest.android",
         "smartthings" to "com.samsung.android.oneconnect",
         "myq" to "com.chamberlain.android.liftmaster.myq",
         "philips" to "com.conex.philips",

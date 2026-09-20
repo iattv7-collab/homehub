@@ -3,6 +3,7 @@
 
 const APP_FALLBACKS = {
   google: "https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app",
+  nest: "https://play.google.com/store/apps/details?id=com.nest.android",
   smartthings: "https://play.google.com/store/apps/details?id=com.samsung.android.oneconnect",
   myq: "https://play.google.com/store/apps/details?id=com.chamberlain.android.liftmaster.myq",
   philips: "https://play.google.com/store/apps/details?id=com.conex.philips",
@@ -20,7 +21,7 @@ function launchApp(appKey) {
 
 export function initializeAppLauncher() {
   document.querySelector('[data-launch="google-camera"]')
-    ?.addEventListener("click", () => launchApp("google"));
+    ?.addEventListener("click", () => launchApp("nest"));
 
   document.querySelector('[data-launch="google-thermostat"]')
     ?.addEventListener("click", () => launchApp("google"));

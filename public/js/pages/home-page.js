@@ -3,7 +3,7 @@
 
 import { watchAuth, logout } from "../services/auth-service.js";
 
-const DAVIE = { lat: 26.0765, lon: -80.2521 };
+const MIRAMAR = { lat: 25.9863, lon: -80.3036 };
 
 function firstName(user) {
   const display = user?.displayName?.trim();
@@ -52,7 +52,7 @@ async function loadWeather() {
   try {
     const url =
       "https://api.open-meteo.com/v1/forecast" +
-      `?latitude=${DAVIE.lat}&longitude=${DAVIE.lon}` +
+      `?latitude=${MIRAMAR.lat}&longitude=${MIRAMAR.lon}` +
       "&current=temperature_2m,weather_code" +
       "&temperature_unit=fahrenheit" +
       "&timezone=America%2FNew_York";
@@ -64,11 +64,11 @@ async function loadWeather() {
     const temp = Math.round(data.current.temperature_2m);
     tempEl.textContent = `${temp}°`;
     iconEl.textContent = weatherIcon(data.current.weather_code);
-    labelEl.textContent = "Davie, Florida";
+    labelEl.textContent = "Miramar, Florida";
   } catch {
     tempEl.textContent = "—";
     iconEl.textContent = "—";
-    labelEl.textContent = "Davie, Florida";
+    labelEl.textContent = "Miramar, Florida";
   }
 }
 

@@ -11,8 +11,7 @@ const APP_FALLBACKS = {
 
 function launchApp(appKey) {
   if (appKey === "nest") {
-    window.location.href =
-      "intent://#Intent;package=com.nest.android;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.nest.android;end";
+    window.location.href = APP_FALLBACKS.nest;
     return;
   }
 

@@ -10,6 +10,12 @@ const APP_FALLBACKS = {
 };
 
 function launchApp(appKey) {
+  if (appKey === "nest") {
+    window.location.href =
+      "intent://#Intent;package=com.nest.android;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.nest.android;end";
+    return;
+  }
+
   if (window.HomeHubAndroid?.launchApp) {
     window.HomeHubAndroid.launchApp(appKey);
     return;
@@ -20,18 +26,23 @@ function launchApp(appKey) {
 }
 
 export function initializeAppLauncher() {
-  document.querySelector('[data-launch="google-camera"]')
-  ?.addEventListener("click", () => launchApp("google"));
+  document
+    .querySelector('[data-launch="google-camera"]')
+    ?.addEventListener("click", () => launchApp("google"));
 
-document.querySelector('[data-launch="google-thermostat"]')
-  ?.addEventListener("click", () => launchApp("nest"));
+  document
+    .querySelector('[data-launch="google-thermostat"]')
+    ?.addEventListener("click", () => launchApp("nest"));
 
-  document.querySelector('[data-launch="smartthings-appliances"]')
+  document
+    .querySelector('[data-launch="smartthings-appliances"]')
     ?.addEventListener("click", () => launchApp("smartthings"));
 
-  document.querySelector('[data-launch="myq-garage"]')
+  document
+    .querySelector('[data-launch="myq-garage"]')
     ?.addEventListener("click", () => launchApp("myq"));
 
-  document.querySelector('[data-launch="philips-door"]')
+  document
+    .querySelector('[data-launch="philips-door"]')
     ?.addEventListener("click", () => launchApp("philips"));
 }

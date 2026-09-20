@@ -10,11 +10,6 @@ const APP_FALLBACKS = {
 };
 
 function launchApp(appKey) {
-  if (appKey === "nest") {
-    window.location.href = APP_FALLBACKS.nest;
-    return;
-  }
-
   if (window.HomeHubAndroid?.launchApp) {
     window.HomeHubAndroid.launchApp(appKey);
     return;
@@ -31,7 +26,7 @@ export function initializeAppLauncher() {
 
   document
     .querySelector('[data-launch="google-thermostat"]')
-    ?.addEventListener("click", () => launchApp("nest"));
+    ?.addEventListener("click", () => launchApp("google"));
 
   document
     .querySelector('[data-launch="smartthings-appliances"]')

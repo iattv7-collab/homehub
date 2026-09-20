@@ -1,15 +1,10 @@
 <!-- public/pages/home/home.html -->
-<!-- HOMEHUB Home -->
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>HOMEHUB</title>
-
     <link rel="stylesheet" href="/css/core/variables.css" />
     <link rel="stylesheet" href="/css/core/base.css" />
     <link rel="stylesheet" href="/css/layout/shell.css" />
@@ -25,26 +20,19 @@
       <aside class="hh-sidebar">
         <div class="hh-brand">
           <div class="hh-logo">H</div>
-
           <h2 class="hh-brand-title">HOMEHUB</h2>
-
-          <p class="hh-brand-subtitle">Smart Home Platform</p>
+          <p class="hh-brand-subtitle">Home</p>
         </div>
 
         <nav class="hh-nav">
-          <a class="hh-nav-link active">🏠 Home</a>
-          <a class="hh-nav-link">📱 Devices</a>
-          <a class="hh-nav-link">🏡 Rooms</a>
-          <a class="hh-nav-link">⚡ Scenes</a>
-          <a class="hh-nav-link">📜 Activity</a>
-          <a class="hh-nav-link">⚙ Settings</a>
-          <a class="hh-nav-link">👤 Profile</a>
+          <a class="hh-nav-link active" href="/pages/home/home.html">Home</a>
+          <button class="hh-nav-link hh-nav-button" id="sign-out" type="button">Sign out</button>
         </nav>
 
         <div class="hh-sidebar-footer">
           <div class="hh-user-card">
-            <strong>Marlon Vargas</strong>
-            <span>Everything looks good.</span>
+            <strong id="user-name">Signed in</strong>
+            <span id="user-status">Loading…</span>
           </div>
         </div>
       </aside>
@@ -53,68 +41,44 @@
         <div class="hh-page hh-home">
           <header class="hh-topbar">
             <div class="hh-greeting">
-              <h1>Good Evening, Marlon</h1>
-
-              <p>Everything looks good.</p>
+              <h1 id="greeting-title">Welcome back</h1>
+              <p id="greeting-sub">Loading your home…</p>
             </div>
 
             <div class="hh-weather">
-              <div class="hh-weather-icon">☀️</div>
-
+              <div class="hh-weather-icon" id="weather-icon">—</div>
               <div>
-                <div class="hh-weather-temp">74°</div>
-
-                <div class="hh-weather-label">Davie, Florida</div>
+                <div class="hh-weather-temp" id="weather-temp">—</div>
+                <div class="hh-weather-label" id="weather-label">Davie, Florida</div>
               </div>
             </div>
           </header>
 
           <section class="hh-status-grid">
             <div class="hh-card hh-status-card">
-              <div class="hh-status-icon">🔒</div>
-
-              <div>
-                <h3>Security</h3>
-
-                <strong>Secure</strong>
-
-                <p>All doors locked</p>
-              </div>
-            </div>
-
-            <div class="hh-card hh-status-card">
-              <div class="hh-status-icon">🚗</div>
-
-              <div>
-                <h3>Garage</h3>
-
-                <strong>Closed</strong>
-
-                <p>No activity</p>
-              </div>
-            </div>
-
-            <div class="hh-card hh-status-card">
-              <div class="hh-status-icon">🌡️</div>
-
-              <div>
-                <h3>Climate</h3>
-
-                <strong>74°</strong>
-
-                <p>Comfortable</p>
-              </div>
-            </div>
-
-            <div class="hh-card hh-status-card">
               <div class="hh-status-icon">📶</div>
-
               <div>
                 <h3>Network</h3>
+                <strong id="network-state">Checking</strong>
+                <p id="network-detail">Checking connection</p>
+              </div>
+            </div>
 
-                <strong>Online</strong>
+            <div class="hh-card hh-status-card">
+              <div class="hh-status-icon">🔗</div>
+              <div>
+                <h3>Shortcuts</h3>
+                <strong>5 ready</strong>
+                <p>Opens the apps already on this phone</p>
+              </div>
+            </div>
 
-                <p>Connected</p>
+            <div class="hh-card hh-status-card">
+              <div class="hh-status-icon">🏠</div>
+              <div>
+                <h3>This hub</h3>
+                <strong>Personal</strong>
+                <p>Family use only</p>
               </div>
             </div>
           </section>
@@ -127,91 +91,57 @@
             <div class="hh-app-grid">
               <div class="hh-card hh-app-card">
                 <div class="hh-app-icon">📷</div>
-
                 <div>
-                  <h3>Camera Access</h3>
-
-                  <p>Launches Google Home.</p>
+                  <h3>Camera</h3>
+                  <p>Opens Google Home.</p>
                 </div>
-
-                <button class="hh-button" data-launch="google-camera">
-                  Camera Access
-                </button>
+                <button class="hh-button" type="button" data-launch="google-camera">Open cameras</button>
               </div>
 
               <div class="hh-card hh-app-card">
                 <div class="hh-app-icon">🚪</div>
-
                 <div>
                   <h3>Front Door</h3>
-
-                  <p>Launches Philips Home Access.</p>
+                  <p>Opens Philips Home Access.</p>
                 </div>
-
-                <button class="hh-button" data-launch="philips-door">
-                  Door Lock
-                </button>
+                <button class="hh-button" type="button" data-launch="philips-door">Open lock</button>
               </div>
 
               <div class="hh-card hh-app-card">
                 <div class="hh-app-icon">🚗</div>
-
                 <div>
-                  <h3>Garage Door</h3>
-
-                  <p>Launches myQ.</p>
+                  <h3>Garage</h3>
+                  <p>Opens myQ.</p>
                 </div>
-
-                <button class="hh-button" data-launch="myq-garage">
-                  Garage Door
-                </button>
+                <button class="hh-button" type="button" data-launch="myq-garage">Open garage</button>
               </div>
 
               <div class="hh-card hh-app-card">
                 <div class="hh-app-icon">🧺</div>
-
                 <div>
                   <h3>Appliances</h3>
-
-                  <p>Launches SmartThings.</p>
+                  <p>Opens SmartThings.</p>
                 </div>
-
-                <button class="hh-button" data-launch="smartthings-appliances">
-                  Appliances
-                </button>
+                <button class="hh-button" type="button" data-launch="smartthings-appliances">Open appliances</button>
               </div>
 
               <div class="hh-card hh-app-card">
                 <div class="hh-app-icon">🌡️</div>
-
                 <div>
                   <h3>Thermostat</h3>
-
-                  <p>Launches Google Home.</p>
+                  <p>Opens Google Home.</p>
                 </div>
-
-                <button class="hh-button" data-launch="google-thermostat">
-                  Thermostat
-                </button>
+                <button class="hh-button" type="button" data-launch="google-thermostat">Open thermostat</button>
               </div>
             </div>
-          </section>
-
-          <section class="hh-card hh-activity">
-            <h3>Recent Activity</h3>
-
-            <p>Activity will appear here as devices are connected.</p>
           </section>
         </div>
       </main>
     </div>
 
     <nav class="hh-mobile-nav">
-      <a class="active"><span>🏠</span>Home</a>
-      <a><span>📱</span>Devices</a>
-      <a><span>🏡</span>Rooms</a>
-      <a><span>📜</span>Activity</a>
-      <a><span>⚙</span>Settings</a>
+      <a class="active" href="/pages/home/home.html"><span>🏠</span>Home</a>
+      <button id="sign-out-mobile" type="button"><span>🚪</span>Sign out</button>
     </nav>
 
     <script type="module" src="/js/core/app.js"></script>

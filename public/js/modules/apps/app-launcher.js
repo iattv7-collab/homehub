@@ -14,27 +14,23 @@ function launchApp(appKey) {
     return;
   }
 
-  window.location.href = APP_FALLBACKS[appKey];
+  const fallback = APP_FALLBACKS[appKey];
+  if (fallback) window.location.href = fallback;
 }
 
 export function initializeAppLauncher() {
-  document
-    .querySelector('[data-launch="google-camera"]')
+  document.querySelector('[data-launch="google-camera"]')
     ?.addEventListener("click", () => launchApp("google"));
 
-  document
-    .querySelector('[data-launch="google-thermostat"]')
+  document.querySelector('[data-launch="google-thermostat"]')
     ?.addEventListener("click", () => launchApp("google"));
 
-  document
-    .querySelector('[data-launch="smartthings-appliances"]')
+  document.querySelector('[data-launch="smartthings-appliances"]')
     ?.addEventListener("click", () => launchApp("smartthings"));
 
-  document
-    .querySelector('[data-launch="myq-garage"]')
+  document.querySelector('[data-launch="myq-garage"]')
     ?.addEventListener("click", () => launchApp("myq"));
 
-  document
-    .querySelector('[data-launch="philips-door"]')
+  document.querySelector('[data-launch="philips-door"]')
     ?.addEventListener("click", () => launchApp("philips"));
 }
